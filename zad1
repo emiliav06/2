@@ -1,0 +1,30 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main()
+{
+    srand(time(0)); //seed random number generator
+    int num = rand() % 100 + 1; // random number between 1 and 100
+    cout << "Guess My Number Game\n\n"; //izvejdame tekst i dva prazni reda
+
+    int guess = 0; //suzdavame promenliva ot tip int s nachalna stoinost 0
+    while (guess != num) { // dokato promenlivata ne e ravna na num
+        cout << "Enter a guess between 1 and 100 : "; // izvejdame tozi tekst 
+        cin >> guess; // potrebitelq trqbva da vuvede drugo chislo
+
+        if (guess > num) { //ako chisloto, koeto e vuvel e po-golqmo ot num
+            cout << "Too high!\n\n"; // izvejda se tozi tekst i dva prazni reda
+        }
+        else if (guess < num) // ako e po-malko ot num
+            {
+                cout << "Too low!\n\n"; // izvejda se tozi tekst i dva prazni reda
+            }
+        else { // ako ne e nito po-golqmo, nito po-malko, toest ako e ravno
+            cout << "\nCorrect! You got it in "; // izvejda se tozi tekst
+        }
+    }
+
+    return 0; // krai
+}
