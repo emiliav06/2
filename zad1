@@ -7,7 +7,7 @@ int main()
 {
     cout << "Guess My Number Game\n\n"; //izvejdame tekst i dva prazni reda
     
-    long long a,b;
+    long long a,b,br=0;
     cout << "Ot kolko do kolko da e chisloto, koeto trqbva da poznaesh";
     cin >> a >> b;
     
@@ -19,7 +19,8 @@ int main()
 
     int guess = 0; //suzdavame promenliva ot tip int s nachalna stoinost 0
     while (guess != num) { // dokato promenlivata ne e ravna na num
-        cout << "Enter a guess between"<< a << "and" << b <<" : "; // izvejdame tozi tekst 
+        br++;
+        cout << "Enter a guess between "<< a << " and " << b <<" : "; // izvejdame tozi tekst 
         cin >> guess; // potrebitelq trqbva da vuvede drugo chislo
 
         if (guess > num) { //ako chisloto, koeto e vuvel e po-golqmo ot num
@@ -30,7 +31,13 @@ int main()
                 cout << "Too low!\n\n"; // izvejda se tozi tekst i dva prazni reda
             }
         else { // ako ne e nito po-golqmo, nito po-malko, toest ako e ravno
-            cout << "\nCorrect! You got it in "; // izvejda se tozi tekst
+            cout << "\nCorrect! "; // izvejda se tozi tekst
         }
     }
+
+
+ cout << endl << "Ti pozna chisloto s " << br << " opita !";
+ 
+   return 0;
+}
 
