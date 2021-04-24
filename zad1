@@ -18,10 +18,17 @@ int main()
    
 
     int guess = 0; //suzdavame promenliva ot tip int s nachalna stoinost 0
+   
     while (guess != num) { // dokato promenlivata ne e ravna na num
         br++;
         cout << "Enter a guess between "<< a << " and " << b <<" : "; // izvejdame tozi tekst 
         cin >> guess; // potrebitelq trqbva da vuvede drugo chislo
+
+        if (guess == 0) 
+        { 
+        cout << "End" ; 
+        return 0;
+        }
 
         if (guess > num) { //ako chisloto, koeto e vuvel e po-golqmo ot num
             cout << "Too high!\n\n"; // izvejda se tozi tekst i dva prazni reda
@@ -40,4 +47,5 @@ int main()
  
    return 0;
 }
+
 
